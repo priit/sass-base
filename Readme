@@ -1,0 +1,31 @@
+== What is it?
+
+Sass Base is my small collection of CSS mixins using SASS picked best part from Yahoo YUI CSS and Blueprint CSS. I'll try to keep Sass Base as minium as possible. Use it and fork it as you wish, merge requests are always welcome!
+
+== How it is useful?
+
+You can use virtual px for font size:
+
+.header
+  font-size = !18px
+  
+It will be converted to 123.1% based on YUI Font CSS calculation, read more at http://developer.yahoo.com/yui/fonts/
+
+Grid similar to Blueprint span but using px directly:
+
+.content
+  +column(600px)
+
+.sidebar
+  +last-column(300px)
+
+== How to instal?
+
+Install Chris Eppstein fork of haml, that allows you to store sass files in more than one directory and use mixins with variable:
+./script/plugin install git://github.com/chriseppstein/haml.git
+
+== Credits
+
+Reset, Font, Base is from Yahoo YUI CSS framework (http://developer.yahoo.com/yui/)
+Grid is inspired from Bluepirnt CSS (http://code.google.com/p/blueprintcss/)
+Thanks goes to Chris Eppstein for promoting Sass mixins!
