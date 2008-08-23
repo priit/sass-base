@@ -72,23 +72,6 @@ pre, code, kbd, samp, tt
   *font-size: 108%
   line-height: 100%
 
-/* Grid inpired from Blueprint Grid
-body 
-  margin: 10px
-.container 
-  width: 975px
-  margin: 0 auto
-
-=column(!n)
-  float: left
-  margin-right: 10px
-  width = !n - 10px
-
-=last-column(!n)
-  float: left
-  margin-right: 0
-  width = !n
-
 /* Base font from YUI Base CSS (with some changes)
 h1
   font-size = !18px
@@ -154,6 +137,23 @@ pre
 input[type=text],input[type=password],textarea
   width:12.25em
   *width:11.9em
+
+/* Grid inpired from Blueprint Grid
+body 
+  margin: 10px
+.container 
+  width: 975px
+  margin: 0 auto
+
+=column(!n)
+  float: left
+  margin-right: 10px
+  width = !n - 10px
+
+=last-column(!n)
+  float: left
+  margin-right: 0
+  width = !n
 
 /* Flash messages from Blueprint
 =flash
