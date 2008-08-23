@@ -1,17 +1,13 @@
 == What is it?
 
-Sass Base is a small collection of CSS mixins using SASS picked best parts from Yahoo YUI CSS and Blueprint CSS. I'll try to keep Sass Base as minium as possible. Use it and fork it as you wish, merge requests are always welcome!
+Sass Base is a small collection of CSS mixins using SASS picked best parts 
+from Yahoo YUI CSS and Blueprint CSS. I'll try to keep Sass Base as minimum
+as possible. Use it and fork it as you wish, merge requests are always welcome!
 
 == How it is useful?
 
-You can use virtual px for font size:
-
-.header
-  font-size = !18px
-  
-It will be converted to 123.1% based on YUI Font CSS calculation, read more at http://developer.yahoo.com/yui/fonts/
-
-Grid similar to Blueprint span but using px directly:
+First, Sass mixins rock! 
+It lets you do grid similar to Blueprint but with semantic way:
 
 .content
   +column(600px)
@@ -19,9 +15,26 @@ Grid similar to Blueprint span but using px directly:
 .sidebar
   +last-column(300px)
 
-== How to instal?
+Sass mixins gives you very nice maintainable sass files, only minus is that
+css will become a bit longer at the moment (later perhaps we can improve sass 
+mixins to generate separate classes as the old way of css, but you still have
+clean sass files)
 
-Install Chris Eppstein fork of haml, that allows you to store sass files in more than one directory and use mixins with variable:
+
+You can use virtual px for font size:
+
+.header
+  font-size = !18px
+  
+It will be converted to 123.1% based on YUI Font CSS calculation, 
+read more at http://developer.yahoo.com/yui/fonts/
+
+
+== How to install?
+
+Install Chris Eppstein fork of haml, that allows you to store sass files in more 
+than one directory and use mixins with variable:
+
 ./script/plugin install git://github.com/chriseppstein/haml.git
 
 == Credits
