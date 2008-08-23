@@ -16,10 +16,7 @@ It lets you do grid similar to Blueprint but with semantic way:
   +last-column(300px)
 
 Sass mixins gives you very nice maintainable sass files, only minus is that
-css will become a bit longer at the moment (later perhaps we can improve sass 
-mixins to generate separate classes as the old way of css, but you still have
-clean sass files)
-
+css file will become a bit longer.
 
 You can use virtual px for font size:
 
