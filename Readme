@@ -23,16 +23,34 @@ You can use virtual px for font size:
 .header
   font-size = !18px
   
-It will be converted to 123.1% based on YUI Font CSS calculation, 
-read more at http://developer.yahoo.com/yui/fonts/
+It will be converted to 123.1% based on YUI Font CSS calculation (its recalculated), 
+read more at http://developer.yahoo.com/yui/fonts/ about it.
 
 
 == How to install?
 
-Install Chris Eppstein fork of haml, that allows you to store sass files in more 
-than one directory and use mixins with variable:
+First istall haml gem (version 2.0.3 or newer):
 
-./script/plugin install git://github.com/chriseppstein/haml.git
+  sudo gem istall haml
+
+Second add config.gem 'haml' to your rails config/environment.rb:
+
+  Rails::Initializer.run do |config|
+    config.gem 'haml'
+  end
+  
+Third add base.sass to your public/stylesheets/sass/ directory and 
+add import at the top of your application.sass:
+
+  @import base.sass
+
+
+== Examples
+
+You can take a look how sass-based is used at some projects:
+
+  http://gitorious.org/projects/bl6g
+
 
 == Credits
 
