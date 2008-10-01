@@ -29,18 +29,23 @@ read more at http://developer.yahoo.com/yui/fonts/ about it.
 
 == How to install?
 
-First istall haml gem (version 2.0.3 or newer):
+Firstly istall haml gem (version 2.0.3 or newer):
 
   sudo gem istall haml
 
-Second add config.gem 'haml' to your rails config/environment.rb:
+Add config.gem 'haml' to your rails config/environment.rb:
 
   Rails::Initializer.run do |config|
     config.gem 'haml'
   end
   
-Third add base.sass to your public/stylesheets/sass/ directory and 
-add import at the top of your application.sass:
+Secondly install Sass Base
+
+  git clone git://gitorious.org/sass-base/mainline.git
+  or git clone git://github.com/priit/sass-base.git
+
+Add base.sass to your public/stylesheets/sass/ directory and 
+add @import at the top of your application.sass:
 
   @import base.sass
 
