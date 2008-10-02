@@ -1,30 +1,10 @@
+
 == What is it?
 
 Sass Base is a small collection of CSS mixins using SASS picked best parts 
 from Yahoo YUI CSS and Blueprint CSS. I'll try to keep Sass Base as minimum
 as possible. Use it and fork it as you wish, merge requests are always welcome!
 
-== How it is useful?
-
-First, Sass mixins rock! 
-It lets you do grid similar to Blueprint but with semantic way:
-
-.content
-  +column(600px)
-
-.sidebar
-  +last-column(300px)
-
-Sass mixins gives you very nice maintainable sass files, only minus is that
-css file will become a bit longer.
-
-You can use virtual px for font size:
-
-.header
-  font-size = !18px
-  
-It will be converted to 123.1% based on YUI Font CSS calculation (its recalculated), 
-read more at http://developer.yahoo.com/yui/fonts/ about it.
 
 
 == How to install?
@@ -50,6 +30,32 @@ add @import at the top of your application.sass:
   @import base.sass
 
 
+
+== How it is useful?
+
+First, Sass and its mixins rock! 
+It lets you do grid similar to Blueprint but with very nice semantic way:
+
+.content
+  +column(600px)       # => usual column
+
+.sidebar
+  +column(300px,last)  # => last column in the row
+
+#Footer
+  +column              # => now it uses maximum !containerWidth value (default is 975px)
+
+
+You can use virtual px for font size:
+
+.header
+  font-size = !18px
+  
+It will be converted to 138.4615% what is inspired from YUI Font CSS calculation (its recalculated), 
+read more at http://developer.yahoo.com/yui/fonts/ about it.
+
+
+
 == Examples
 
 You can take a look how Sass Base is used at some projects:
@@ -62,3 +68,4 @@ You can take a look how Sass Base is used at some projects:
 Reset, Font, Base is from Yahoo YUI CSS framework (http://developer.yahoo.com/yui/)
 Grid is inspired from Bluepirnt CSS (http://code.google.com/p/blueprintcss/)
 Thanks goes to Chris Eppstein for promoting Sass mixins!
+

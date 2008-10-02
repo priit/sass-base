@@ -107,7 +107,11 @@ pre, code, kbd, samp, tt
   *font-size: 108%
   line-height: 100%
 
-/* Base font from YUI Base CSS (with some changes)
+/* Base font from YUI Base CSS with changes
+body
+  # Avoid small horizontal movement between short and long pages, 
+  # where one page has got vertical scroll and another does not.
+  overflow-y: scroll
 h1
   font-size = !18px
   font-weight: bold
@@ -173,27 +177,36 @@ input[type=text],input[type=password],textarea
 
 
 /* Grid inpired from Blueprint Grid
+
+# You can redefine it in your application.sass,
+# for example add '!containerWidth = 850px'
+!containerWidth = 975px
+
 body 
   margin: 10px
 .container 
-  width: 975px
+  width = !containerWidth
   margin: 0 auto
 
-=column(!n)
+# Examples:
+#   +column(750px)        # => usual column
+#   +column(750px, last)  # => last column
+#   +column               # => using containerWidth value, it is also last column. 
+#                              Default width value is 975px. You can redefine 
+#                              !containerWidth in your application.sass
+#
+=column(!n = max, !last = false)
   float: left
-  margin-right: 10px
-  width = !n - 10px
-
-=last-column(!n)
-  float: left
-  margin-right: 0
-  width = !n
-
-
-/* Basic stuff
-body
-  # avoid small horizontal movement between short and long pages, where one page has got vertical scroll and another does not.
-  overflow-y: scroll
+  @if !n != max
+    @if !!last
+      margin-right: 10px
+      width = !n - 10px
+    @if !last
+      margin-right: 0px
+      width = !n
+  @if !n == max
+    margin-right: 0px
+    width = !containerWidth
 
 
 /* Flash messages from Blueprint
