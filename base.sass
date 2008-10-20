@@ -1,3 +1,16 @@
+//
+// Sass Base
+// http://gitorious.org/projects/sass-base
+//
+// Sass Base is a small collection of CSS mixins
+// using SASS picked best parts from Yahoo YUI CSS and
+// Blueprint CSS. I'll try to keep Sass Base as minimum
+// as possible. Use it and fork it as you wish, 
+// merge requests are always welcome!
+//
+#
+/* Sass Base
+#
 // from YUI Font, percentages overcalucalted
 // Example usage: font-size= !14px
 !1px = 7.6923%
@@ -178,8 +191,8 @@ input[type=text],input[type=password],textarea
 
 /* Grid inpired from Blueprint Grid
 
-# You can redefine it in your application.sass,
-# for example add '!containerWidth = 850px'
+// You can redefine it in your application.sass,
+// for example add '!containerWidth = 850px'
 !containerWidth = 975px
 
 body 
@@ -188,13 +201,13 @@ body
   width = !containerWidth
   margin: 0 auto
 
-# Examples:
-#   +column(750px)        # => usual column
-#   +column(750px, last)  # => last column
-#   +column               # => using containerWidth value, it is also last column. 
-#                              Default width value is 975px. You can redefine 
-#                              !containerWidth in your application.sass
-#
+// Examples:
+//   +column(750px)        # => usual column
+//   +column(750px, last)  # => last column
+//   +column               # => using containerWidth value, it is also last column. 
+//                              Default width value is 975px. You can redefine 
+//                              !containerWidth in your application.sass
+//
 =column(!n = max, !last = false)
   float: left
   @if !n != max
@@ -214,6 +227,7 @@ body
   padding: .8em
   margin-bottom: 1em
   border: 2px solid #ddd
+.errorExplanation,
 .error
   +flash
   background: #FBE3E4
@@ -235,3 +249,12 @@ body
   color: #264409
   a
     color: #264409
+#
+/* End of Sass Base framework!
+#
+#
+#
+#
+#
+#
+#
