@@ -1,40 +1,31 @@
+== What is Sass Base?
 
-== What is it?
+Sass Base is a small collection of CSS mixins using Sass and Compass. 
 
-Sass Base is a small collection of CSS mixins using SASS picked best parts 
-from Yahoo YUI CSS and Blueprint CSS. I'll try to keep Sass Base as minimum
-as possible. Use it and fork it as you wish, merge requests are always welcome!
-
+I have picked parts from Yahoo YUI and improved Blueprint Grid.
+Use it and fork it as you wish, merge requests are always welcome!
 
 
 == How to install?
 
-Firstly istall haml gem (version 2.0.3 or newer):
-
-  sudo gem istall haml
-
-Add config.gem 'haml' to your rails config/environment.rb:
-
-  Rails::Initializer.run do |config|
-    config.gem 'haml'
-  end
+First, please install Compass and Haml/Sass form:
   
-Secondly install Sass Base
+  http://wiki.github.com/chriseppstein/compass/getting-started
+
+Now you can clone Sass Base:
 
   git clone git://gitorious.org/sass-base/mainline.git
-  or git clone git://github.com/priit/sass-base.git
 
-Add base.sass to your public/stylesheets/sass/ directory and 
-add @import at the top of your application.sass:
+and copy base.sass to rails_root/app/stylesheets/ directory.
+add add import to your screen.sass:
 
   @import base.sass
-
 
 
 == How it is useful?
 
 First, Sass and its mixins rock! 
-It lets you do grid similar to Blueprint but with very nice semantic way:
+Sass Base lets you do grid similar to Blueprint but with very nice semantic way:
 
 .content
   +column(600px)       # => usual column
@@ -46,26 +37,8 @@ It lets you do grid similar to Blueprint but with very nice semantic way:
   +column              # => now it uses maximum !containerWidth value (default is 975px)
 
 
-You can use virtual px for font size:
-
-.header
-  font-size = !18px
-  
-It will be converted to 138.4615% what is inspired from YUI Font CSS calculation (its recalculated), 
-read more at http://developer.yahoo.com/yui/fonts/ about it.
-
-
-
-== Examples
-
-You can take a look how Sass Base is used at some projects:
-
-  http://gitorious.org/projects/bl6g
-
-
 == Credits
 
-Reset, Font, Base is from Yahoo YUI CSS framework (http://developer.yahoo.com/yui/)
+Thanks goes to Chris Eppstein for promoting Sass mixins and creating Compass!
+Yahoo YUI CSS framework (http://developer.yahoo.com/yui/)
 Grid is inspired from Bluepirnt CSS (http://code.google.com/p/blueprintcss/)
-Thanks goes to Chris Eppstein for promoting Sass mixins!
-
