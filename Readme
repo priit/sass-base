@@ -36,6 +36,20 @@ Sass Base lets you do grid similar to Blueprint but with very nice semantic way:
 #Footer
   +column              # => now it uses maximum !containerWidth value (default is 975px)
 
+From Compass about how to use Yahoo YUI font size:
+  Sets the font size specified in pixels using percents so that the base
+  font size changes and 1em has the correct value. When nesting font size
+  declarations, within the DOM tree, the base_font_size must be the parent's
+  effective font-size in pixels.
+  Usage Examples:
+   .big
+     +font-size(16px)
+   .bigger
+     +font-size(18px)
+   .big .bigger
+     +font-size(18px, 16px)
+ 
+For more information see the table found at http://developer.yahoo.com/yui/fonts/#fontsize
 
 == Credits
 
