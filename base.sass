@@ -8,11 +8,9 @@
 # for example add '!containerWidth = 850px'
 !containerWidth = 975px
 
-body 
-  margin: 10px
-.container 
+#Container 
   width = !containerWidth
-  margin: 0 auto
+  padding: 10px 10% 10px 10%
 
 // Examples:
 //   +column(750px)        # => usual column
@@ -21,15 +19,15 @@ body
 //                              Default width value is 975px. You can redefine 
 //                              !containerWidth in your application.sass
 //
-=column(!n = max, !last = false)
+=column(!n = "max", !last = false)
   float: left
-  @if !n != max
+  @if !n != "max"
     @if !last
       margin-right: 0px
       width = !n
     @else
       margin-right: 10px
       width = !n - 10px
-  @if !n == max
+  @if !n == "max"
     margin-right: 0px
     width = !containerWidth
