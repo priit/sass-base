@@ -27,14 +27,14 @@ add add import to your screen.sass:
 First, Sass and its mixins rock! 
 Sass Base lets you do grid similar to Blueprint but with very nice semantic way:
 
-.content
-  +column(600px)       # => usual column
+#content
+  +column(600px)          # => usual column
 
-.sidebar
-  +column(300px,last)  # => last column in the row
+#sidebar
+  +column(300px, "last")  # => last column in the row
 
 #Footer
-  +column              # => now it uses maximum !containerWidth value (default is 975px)
+  +column                 # => now it uses maximum !containerWidth value (default is 975px)
 
 From Compass about how to use Yahoo YUI font size:
   Sets the font size specified in pixels using percents so that the base

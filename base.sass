@@ -4,8 +4,8 @@
 
 /* Base Grid inspired from Blueprint Grid
 
-# You can redefine content width in your sass fail,
-# for example add '!containerWidth = 850px'
+// You can redefine content width in your sass fail,
+// for example add '!containerWidth = 850px'
 !containerWidth = 975px
 
 #Container 
@@ -13,21 +13,21 @@
   padding: 10px 10% 10px 10%
 
 // Examples:
-//   +column(750px)        # => usual column
-//   +column(750px, last)  # => last column
-//   +column               # => using containerWidth value, it is also last column. 
-//                              Default width value is 975px. You can redefine 
-//                              !containerWidth in your application.sass
+//   +column(750px)          # => usual column
+//   +column(750px, "last")  # => last column
+//   +column                 # => using containerWidth value, it is also last column. 
+//                                Default width value is 975px. You can redefine 
+//                                !containerWidth in your application.sass
 //
-=column(!n = "max", !last = false)
+=column(!n = !containerWidth, !last = false)
   float: left
-  @if !n != "max"
+  @if !n != !containerWidth
     @if !last
       margin-right: 0px
       width = !n
     @else
       margin-right: 10px
       width = !n - 10px
-  @if !n == "max"
+  @if !n == !containerWidth
     margin-right: 0px
     width = !containerWidth
