@@ -8,13 +8,19 @@
 // for example add '!containerWidth = 850px'
 !containerWidth = 975px
 
+html
+  // scroll is added, otherwise page is moving a bit horizontally when
+  // user browses between short and long pages or ajax adds enough content
+  // to trigger vertical scroll
+  overflow-y: scroll
+
 body
   margin: 10px
 
 #Container 
   width = !containerWidth
   margin: 0 auto
-
+  
 // Examples:
 //   +column(750px)          # => usual column
 //   +column(750px, "last")  # => last column
