@@ -1,12 +1,18 @@
-@import compass/reset.sass
+@import compass/utilities/general/reset.sass
++global-reset
+
 @import yui/modules/fonts.sass
++yui-base-fonts
+
 @import blueprint/modules/interaction.sass
++blueprint-interaction
+
 
 /* Base Grid inspired from Blueprint Grid
 
 // You can redefine content width in your sass fail,
 // for example add '!containerWidth = 850px'
-!containerWidth = 975px
+!containerWidth = 980px
 
 html
   // scroll is added, otherwise page is moving a bit horizontally when
@@ -25,7 +31,7 @@ body
 //   +column(750px)          # => usual column
 //   +column(750px, "last")  # => last column
 //   +column                 # => using containerWidth value, it is also last column. 
-//                                Default width value is 975px. You can redefine 
+//                                Default width value is 980px. You can redefine 
 //                                !containerWidth in your application.sass
 //
 =column(!n = !containerWidth, !last = false)
