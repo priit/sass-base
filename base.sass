@@ -1,11 +1,33 @@
 @import compass/utilities/general/reset.sass
 +global-reset
 
-@import yui/modules/fonts.sass
-+yui-base-fonts
-
 @import blueprint/modules/interaction.sass
 +blueprint-interaction
+
+// scroll is added, otherwise page is moving a bit horizontally when
+// user browses between short and long pages or ajax adds enough content
+// to trigger vertical scroll
+html
+  overflow-y: scroll
+
+// fix overflow back to auto
+textarea
+  overflow-y: auto
+
+// line-height suggested by http://www.slideshare.net/maxdesign/line-height  
+body
+  line-height: 1.5
+h1,h2,h3,h4,h5
+  line-height: 1.2
+
+// fix for sup,sub suggested by http://www.slideshare.net/maxdesign/line-height
+sup,
+sub
+  line-height: 0
+
+// lets's give some default space
+body
+  margin: 10px
 
 
 /* Base Grid inspired from Blueprint Grid
@@ -14,19 +36,10 @@
 // for example add '!containerWidth = 850px'
 !containerWidth = 980px
 
-html
-  // scroll is added, otherwise page is moving a bit horizontally when
-  // user browses between short and long pages or ajax adds enough content
-  // to trigger vertical scroll
-  overflow-y: scroll
-
-body
-  margin: 10px
-
 #Container 
   width = !containerWidth
   margin: 0 auto
-  
+
 // Examples:
 //   +column(750px)          # => usual column
 //   +column(750px, "last")  # => last column
