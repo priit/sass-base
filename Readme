@@ -1,31 +1,21 @@
-== What is Sass Base?
+== What is Microgrid?
 
-Sass Base is a small collection of CSS mixins using Sass and Compass. 
-
-I have picked parts from Yahoo YUI and improved Blueprint Grid.
-Use it and fork it as you wish, merge requests are always welcome!
+Microgrid is very minimal but dynamic grid inspired by Blueprint Grid. 
 
 
-== How to install?
+== How to install it?
 
-First, please install Compass and Haml/Sass form:
-  
-  http://wiki.github.com/chriseppstein/compass/getting-started
+I'm using it together with sass (3.0 and up) and compass (0.10 and up).
 
-Now you can clone Sass Base:
+Copy microgrid.sass to your sass files dir and import it from your application sass file:
 
-  git clone git://gitorious.org/sass-base/mainline.git
-
-and copy base.sass to rails_root/app/stylesheets/ directory.
-add add import to your screen.sass:
-
-  @import base.sass
+@import "microgrid"
 
 
 == How it is useful?
 
-First, Sass and its mixins rock! 
-Sass Base lets you do grid similar to Blueprint but with very nice semantic way:
+Microgrid lets you do grid similar to Blueprint but with
+very nice dynamic widths:
 
 #content
   +column(600px)          # => usual column
@@ -34,25 +24,10 @@ Sass Base lets you do grid similar to Blueprint but with very nice semantic way:
   +column(300px, "last")  # => last column in the row
 
 #Footer
-  +column                 # => now it uses maximum !containerWidth value (default is 975px)
+  +column                 # => wide column (default is 975px)
 
-From Compass about how to use Yahoo YUI font size:
-  Sets the font size specified in pixels using percents so that the base
-  font size changes and 1em has the correct value. When nesting font size
-  declarations, within the DOM tree, the base_font_size must be the parent's
-  effective font-size in pixels.
-  Usage Examples:
-   .big
-     +font-size(16px)
-   .bigger
-     +font-size(18px)
-   .big .bigger
-     +font-size(18px, 16px)
- 
-For more information see the table found at http://developer.yahoo.com/yui/fonts/#fontsize
 
 == Credits
 
 Thanks goes to Chris Eppstein for promoting Sass mixins and creating Compass!
-Yahoo YUI CSS framework (http://developer.yahoo.com/yui/)
 Grid is inspired from Bluepirnt CSS (http://code.google.com/p/blueprintcss/)
