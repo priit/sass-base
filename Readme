@@ -21,7 +21,7 @@ very nice dynamic widths:
   +column(600px)          # => usual column
 
 #sidebar
-  +column(300px, "last")  # => last column in the row
+  +column(300px, last)   # => last column in the row
 
 #Footer
   +column                 # => wide column (default is 975px)
