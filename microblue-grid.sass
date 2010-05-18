@@ -1,0 +1,25 @@
+// MicroBlue Grid inspired by Blueprint Grid
+// Created by Priit Tamboom <priit@mx.ee>
+// MIT license
+
+// You can redefine content width in your application sass fail,
+// for example add '$containerWidth: 850px' etc
+$containerWidth: 975px
+
+// Examples:
+//   +column(750px)        # => column with 750px wide
+//   +column(750px, last)  # => last column in row
+//   +column               # => full wide column (by default 975px)
+//
+@mixin column($width = "max", $last = false)
+  float: left
+  @if $width == "max"
+    margin-right: 0px
+    width: $containerWidth
+  @else
+    @if $last
+      margin-right: 0px
+      width: $width
+    @else
+      margin-right: 10px
+      width: $width - 10px
